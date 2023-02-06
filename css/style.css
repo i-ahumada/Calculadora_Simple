@@ -1,8 +1,10 @@
 .calc-container {
+    background-color: #252525;
     width: 500px;
     height: 100vh;
     margin-left: 30%;
     margin-right: auto;
+    border-radius: 15px;
 }
 
 .row {
@@ -11,6 +13,11 @@
 
 textarea {
     resize: none;
+    color: #FAFAFA;
+    background-color: #252525;
+    border: 4px solid rgba(171, 167, 167, 0.801);
+    border-radius: 2px;
+    padding: 6px;
 }
 
 input {
@@ -21,7 +28,6 @@ input {
     background: rgba(171, 167, 167, 0.801);
     transition: all 0.1s linear;
 }
-
 input:active {
     background: rgb(78,76,74);
 }

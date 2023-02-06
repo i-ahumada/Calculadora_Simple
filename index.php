@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="calc-container py-2">
+        <div class="calc-container py-2 px-3">
             <form action="calculate.php" method="post">
                 <div class="row mb-3 mt-2">
                     <div class="col-12 text-right">
-                        <textarea class="h-100 w-100" type="text" name="display" id="display" placeholder="->"><?php 
+                        <textarea class="h-100 w-100" type="text" name="display" id="display" placeholder="->"
+                        onkeydown="return false"><?php 
                                 if(isset($_GET['resultado'])) {
                                     echo $_GET['resultado'];
                                 }

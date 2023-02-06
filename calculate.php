@@ -136,4 +136,4 @@ $resultado = calcular($calcString);
 
 
 
-// header("Location: index.php?resultado=$resultado");
+header("Location: index.php?resultado=$resultado");
