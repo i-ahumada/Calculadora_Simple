@@ -21,10 +21,10 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-3">
-                        <input class="w-100 calc-button" type="button" value="" >
+                        <input class="w-100 calc-button" type="button" value="" disabled>
                     </div>
                     <div class="col-3">
-                        <input class="w-100 calc-button" type="button" value="[]^[]" >
+                        <input class="w-100 calc-button" type="button" value="[]^[]" disabled>
                     </div>
                     <div class="col-3">
                         <input class="w-100" type="button" value="CE" id="clear-everything">
