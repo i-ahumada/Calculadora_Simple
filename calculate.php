@@ -56,10 +56,11 @@ function calculadoraMultiplicacionDivision(string $string, array $arrayOperadore
     // Array sin sumas o restas
     $arraySinMultiplicacionDivision = explode('&',str_replace(['*', '/'],'&',$string)); 
     $resultadoParcialMultiplicacionDivision = $arraySinMultiplicacionDivision[0];
-
-    for ($j=1 ,$i=0; $i < sizeof($arrayOperadores); $i++) {
+    
+    for ($j=1 ,$i=0; $i < sizeof($arrayOperadores); $i++, $j++) {
         if($arrayOperadores[$i] == '*') {
             $resultadoParcialMultiplicacionDivision = $resultadoParcialMultiplicacionDivision * $arraySinMultiplicacionDivision[$j];
+            
         } else {
             $resultadoParcialMultiplicacionDivision = $resultadoParcialMultiplicacionDivision / $arraySinMultiplicacionDivision[$j];
         }
@@ -135,4 +136,4 @@ $resultado = calcular($calcString);
 
 
 
-header("Location: index.php?resultado=$resultado");
+// header("Location: index.php?resultado=$resultado");

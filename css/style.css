@@ -15,4 +15,13 @@ textarea {
 
 input {
     height: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(171, 167, 167, 0.801);
+    transition: all 0.1s linear;
+}
+
+input:active {
+    background: rgb(78,76,74);
 }
