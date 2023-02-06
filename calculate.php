@@ -82,7 +82,7 @@ function calculadoraSumaResta(string $string) {
     }
     $operadores = [$operadoresSumaResta, $operadoresMultiplicacionDivision];
 
-    for ($j=0 ,$i=0; $i < sizeof($operadores[0]); $i++) {
+    for ($j=0 ,$i=0; $i < (sizeof($operadores[0]) != 0? sizeof($operadores[0]) : sizeof($operadores[1])); $i++) {
         if($j == 0) {
             if((str_contains($arraySinMasMenos[$j], "*")) or (str_contains($arraySinMasMenos[$j], "/"))) {
                 $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$j]);
