@@ -59,9 +59,9 @@ function calculadoraMultiplicacionDivision(string $string, array $arrayOperadore
 
     for ($j=1 ,$i=0; $i < sizeof($arrayOperadores); $i++) {
         if($arrayOperadores[$i] == '*') {
-            $resultadoParcialMultiplicacionDivision *= $arraySinMultiplicacionDivision[$j];
+            $resultadoParcialMultiplicacionDivision = $resultadoParcialMultiplicacionDivision * $arraySinMultiplicacionDivision[$j];
         } else {
-            $resultadoParcialMultiplicacionDivision /= $arraySinMultiplicacionDivision[$j];
+            $resultadoParcialMultiplicacionDivision = $resultadoParcialMultiplicacionDivision / $arraySinMultiplicacionDivision[$j];
         }
     }
 
@@ -84,20 +84,20 @@ function calculadoraSumaResta(string $string) {
     for ($j=0 ,$i=0; $i < sizeof($operadores[0]); $i++) {
         if($j == 0) {
             if((str_contains($arraySinMasMenos[$j], "*")) or (str_contains($arraySinMasMenos[$j], "/"))) {
-                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$i]);
+                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$j]);
             }
             $resultadoParcialSumaResta = $arraySinMasMenos[$j];
             $j++;
         } 
         if($operadores[0][$i] == '+') {
             if((str_contains($arraySinMasMenos[$j], "*")) or (str_contains($arraySinMasMenos[$j], "/"))) {
-                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$i]);
+                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$j]);
             }
             $resultadoParcialSumaResta += $arraySinMasMenos[$j];
             $j++;
         } else if($operadores[0][$i] == '-'){
             if((str_contains($arraySinMasMenos[$j], "*")) or (str_contains($arraySinMasMenos[$j], "/"))) {
-                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$i]);
+                $arraySinMasMenos[$j] = calculadoraMultiplicacionDivision($arraySinMasMenos[$j], $operadores[1][$j]);
             }
             $resultadoParcialSumaResta -= $arraySinMasMenos[$j];
             $j++;
@@ -135,4 +135,4 @@ $resultado = calcular($calcString);
 
 
 
-// header("Location: index.php?resultado=$resultado");
+header("Location: index.php?resultado=$resultado");
