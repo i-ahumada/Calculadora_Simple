@@ -1,11 +1,8 @@
 .calc-container {
     background-color: #252525;
     width: 500px;
-    height: 98vh;
-    margin-left: 30%;
-    margin-right: auto;
+    height: fit-content;
     border-radius: 15px;
-    margin-top: 5px;
 }
 
 .row {
