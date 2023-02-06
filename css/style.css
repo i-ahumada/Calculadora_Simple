@@ -1,0 +1,18 @@
+.calc-container {
+    width: 500px;
+    height: 100vh;
+    margin-left: 30%;
+    margin-right: auto;
+}
+
+.row {
+    height: 100px;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    height: 100%;
+}
