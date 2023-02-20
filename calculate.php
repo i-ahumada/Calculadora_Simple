@@ -6,7 +6,6 @@
     cuentas solo pero quería hacerlo sin eso, mi 
     objetivo era que salga analizando el string
 
-    Estado: -- a 3 pasos del psiquiátrico --
 --------------------------------------------------------
 */
 
